@@ -21,7 +21,7 @@ class TestState extends FlxState
 		var shaderBuffer1:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer1());
 		var shaderBuffer2:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer2(bg));
 		var shaderBuffer3:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer3());
-		var filters<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
+		var filters:Array<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
 		cam.setFilters(filters);
 		cam.filtersEnabled = true;
 		super.create();
