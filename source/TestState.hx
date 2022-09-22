@@ -11,6 +11,9 @@ import HexMarchShader;
 
 class TestState extends FlxState
 {
+        var shaderBuffer1:ShaderFilter;
+        var shaderBuffer2:ShaderFilter;
+        var shaderBuffer3:ShaderFilter;
 	override public function create() {
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
@@ -18,10 +21,10 @@ class TestState extends FlxState
 		FlxG.cameras.add(cam);
 		cam.bgColor.alpha = 0;
 		bg.cameras = [cam];
-		var shaderBuffer1:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer1());
-		var shaderBuffer2:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer2(bg));
+		shaderBuffer1:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer1());
+		shaderBuffer2:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer2(bg));
                 shaderBuffer2.data.spriteChannel.input = bg.pixels; // BitmapData of the sprite
-		var shaderBuffer3:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer3());
+		shaderBuffer3:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer3());
 		var filters:Array<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
 		cam.setFilters(filters);
 		cam.filtersEnabled = true;
