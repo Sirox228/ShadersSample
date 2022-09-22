@@ -32,9 +32,9 @@ class TestState extends FlxState
 	}
 	
 	override public function update(elapsed:Float) {
-		shaderBuffer1.shader.iTime.value[0] += elapsed;
-		shaderBuffer2.shader.iTime.value[0] += elapsed;
-		shaderBuffer3.shader.iTime.value[0] += elapsed;
+		shaderBuffer1.update(elapsed);
+		shaderBuffer2.update(elapsed);
+		shaderBuffer3.update(elapsed);
 		super.update(elapsed);
 	}
 }
