@@ -1,6 +1,6 @@
 package;
 
-import openfl.display.Shader;
+import openfl.display.GraphicsShader;
 
 // see https://www.shadertoy.com/view/NdKyDw for original shader code
 class HexMarchShaderBuffer1 extends GraphicsShader {
