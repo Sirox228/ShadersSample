@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<app title="ShadersSample" file="Sample" packageName="com.sirox.sample" package="com.sirox.sample" main="Main" version="1.0" company="sirox" />
+
+	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false" />
+
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false" allow-shaders="true" require-shaders="true"/>
+
+	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false" allow-shaders="true" require-shaders="true"/>
+
+	<classpath name="source" />
+	
+	<haxelib name="flixel" />
+	<haxelib name="flixel-addons" />
+	<haxelib name="flixel-ui" />
+	
+	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+	<haxedef name="FLX_NO_DEBUG" unless="debug" />
+	<haxedef name="HXCPP_CHECK_POINTER" />
+	<haxedef name="HXCPP_STACK_LINE" />
+</project>
