@@ -104,19 +104,19 @@ vec3 hsv2rgb(vec3 c) {
 #define HSV2RGB(c)  (c.z * mix(hsv2rgb_K.xxx, clamp(abs(fract(c.xxx + hsv2rgb_K.xyz) * 6.0 - hsv2rgb_K.www) - hsv2rgb_K.xxx, 0.0, 1.0), c.y))
 
 
-// License: Unknown, author: Unknown, found: don't remember
+// License: Unknown, author: Unknown, found: dont remember
 vec4 alphaBlend(vec4 back, vec4 front) {
   float w = front.w + back.w*(1.0-front.w);
   vec3 xyz = (front.xyz*front.w + back.xyz*back.w*(1.0-front.w))/w;
   return w > 0.0 ? vec4(xyz, w) : vec4(0.0);
 }
 
-// License: Unknown, author: Unknown, found: don't remember
+// License: Unknown, author: Unknown, found: dont remember
 vec3 alphaBlend(vec3 back, vec4 front) {
   return mix(back, front.xyz, front.w);
 }
 
-// License: Unknown, author: Unknown, found: don't remember
+// License: Unknown, author: Unknown, found: dont remember
 float tanh_approx(float x) {
   //  Found this somewhere on the interwebs
   //  return tanh(x);
@@ -124,7 +124,7 @@ float tanh_approx(float x) {
   return clamp(x*(27.0 + x2)/(27.0+9.0*x2), -1.0, 1.0);
 }
 
-// License: Unknown, author: Unknown, found: don't remember
+// License: Unknown, author: Unknown, found: dont remember
 float hash(float co) {
   return fract(sin(co*12.9898) * 13758.5453);
 }
