@@ -58,6 +58,7 @@ vec3 dblur(vec2 q,float rad) {
 }
 
 void main() {
+  #pragma body
   vec2 q = openfl_TextureCoordv;
   vec2 p = -1.0+2.0*q;
   vec4 pcol = texture2D(bitmap,q);
@@ -305,6 +306,7 @@ vec3 effect(vec2 p, vec2 q) {
 }
 
 void main() {
+  #pragma body
   vec2 q = openfl_TextureCoordv;
   vec2 p = -1. + 2. * q;
   p.x *= RESOLUTION.x/RESOLUTION.y;
