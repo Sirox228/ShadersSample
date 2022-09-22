@@ -21,10 +21,10 @@ class TestState extends FlxState
 		FlxG.cameras.add(cam);
 		cam.bgColor.alpha = 0;
 		bg.cameras = [cam];
-		shaderBuffer1:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer1());
-		shaderBuffer2:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer2(bg));
+		shaderBuffer1 = new ShaderFilter(new HexMarchShaderBuffer1());
+		shaderBuffer2 = new ShaderFilter(new HexMarchShaderBuffer2(bg));
                 shaderBuffer2.data.spriteChannel.input = bg.pixels; // BitmapData of the sprite
-		shaderBuffer3:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer3());
+		shaderBuffer3 = new ShaderFilter(new HexMarchShaderBuffer3());
 		var filters:Array<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
 		cam.setFilters(filters);
 		cam.filtersEnabled = true;
