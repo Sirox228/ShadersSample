@@ -82,6 +82,9 @@ void main() {
     public function update(elapsed:Float) {
         iTime.value[0] += elapsed;
     }
+    public function setChannel(bitmap:BitmapData) {
+        spriteChannel.input = bitmap;
+    }
 }
 class HexMarchShaderBuffer3 extends GraphicsShader {
 	@:glFragmentSource('
