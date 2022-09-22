@@ -71,11 +71,10 @@ void main() {
 }
 
 	')
-	public function new(sprite:FlxSprite)
+	public function new()
     {
         super();
         iTime.value = [0];
-        spriteChannel.input = sprite.pixels; // BitmapData of the sprite
     }
 }
 class HexMarchShaderBuffer3 extends GraphicsShader {
