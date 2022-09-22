@@ -1,6 +1,6 @@
 package;
 
-import openfl.display.GraphicsShader;
+import openfl.display.Shader;
 
 // see https://www.shadertoy.com/view/NdKyDw for original shader code
 class HexMarchShaderBuffer1 extends GraphicsShader {
@@ -27,6 +27,9 @@ void main() {
     {
         super();
         iTime.value = [0];
+    }
+    public function update(elapsed:Float) {
+        iTime.value[0] += elapsed;
     }
 }
 class HexMarchShaderBuffer2 extends GraphicsShader {
@@ -75,6 +78,9 @@ void main() {
     {
         super();
         iTime.value = [0];
+    }
+    public function update(elapsed:Float) {
+        iTime.value[0] += elapsed;
     }
 }
 class HexMarchShaderBuffer3 extends GraphicsShader {
@@ -319,5 +325,8 @@ void main() {
     {
         super();
         iTime.value = [0];
+    }
+    public function update(elapsed:Float) {
+        iTime.value[0] += elapsed;
     }
 }
