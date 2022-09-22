@@ -8,6 +8,8 @@
 
 	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false" allow-shaders="true" require-shaders="true"/>
 
+        <set name="BUILD_DIR" value="export"/>
+
 	<classpath name="source" />
 	
 	<haxelib name="flixel" />
