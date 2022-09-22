@@ -3,6 +3,7 @@ package;
 import flixel.FlxGame;
 import openfl.display.Sprite;
 import openfl.Lib;
+import openfl.events.Event;
 
 class Main extends Sprite
 {
