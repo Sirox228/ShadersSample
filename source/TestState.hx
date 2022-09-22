@@ -23,7 +23,7 @@ class TestState extends FlxState
 		bg.cameras = [cam];
 		shaderBuffer1 = new ShaderFilter(new HexMarchShaderBuffer1());
 		shaderBuffer2 = new ShaderFilter(new HexMarchShaderBuffer2());
-                shaderBuffer2.data.spriteChannel.input = bg.pixels; // BitmapData of the sprite
+                shaderBuffer2.setChannel(bg.pixels); // BitmapData of the sprite
 		shaderBuffer3 = new ShaderFilter(new HexMarchShaderBuffer3());
 		var filters:Array<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
 		cam.setFilters(filters);
