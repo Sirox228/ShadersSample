@@ -18,19 +18,19 @@ class TestState extends FlxState
 		FlxG.cameras.add(cam);
 		cam.bgColor.alpha = 0;
 		bg.cameras = [cam];
-		var shaderBuffer1:HexMarchShaderBuffer1 = new HexMarchShaderBuffer1();
-		var shaderBuffer2:HexMarchShaderBuffer2 = new HexMarchShaderBuffer2(bg);
-		var shaderBuffer3:HexMarchShaderBuffer3 = new HexMarchShaderBuffer3();
-		var filters<BitmapFilter> = [new ShaderFilter(shaderBuffer1), new ShaderFilter(shaderBuffer2), new ShaderFilter(shaderBuffer3)];
+		var shaderBuffer1:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer1());
+		var shaderBuffer2:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer2(bg));
+		var shaderBuffer3:ShaderFilter = new ShaderFilter(new HexMarchShaderBuffer3());
+		var filters<BitmapFilter> = [shaderBuffer1, shaderBuffer2, shaderBuffer3];
 		cam.setFilters(filters);
 		cam.filtersEnabled = true;
 		super.create();
 	}
 	
 	override public function update(elapsed:Float) {
-		shaderBuffer1.iTime.value[0] += elapsed;
-		shaderBuffer2.iTime.value[0] += elapsed;
-		shaderBuffer3.iTime.value[0] += elapsed;
+		shaderBuffer1.data.iTime.value[0] += elapsed;
+		shaderBuffer2.data.iTime.value[0] += elapsed;
+		shaderBuffer3.data.iTime.value[0] += elapsed;
 		super.update(elapsed);
 	}
 }
